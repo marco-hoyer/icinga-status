@@ -25,9 +25,6 @@ default_task = ['publish']
 def initialize(project):
     project.port_to_run_on = "9000"
 
-    project.depends_on("yaml")
-    project.depends_on("subprocess")
-
     project.install_file('/var/www', 'icinga-status/icinga-status.wsgi')
     project.install_file('/etc/httpd/conf.d/', 'icinga-status/icinga-status.conf')
 
