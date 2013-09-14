@@ -37,7 +37,7 @@ def convert_query_string_to_list(string):
         return []
 
 def get_icinga_metrics(metric_key_list):
-    raw_data = execute("/usr/sbin/icingastats",['--mrtg','--delimiter=,','--data=' + ','.join(metric_key_list)])
+    raw_data = execute("icingastats",['--mrtg','--delimiter=,','--data=' + ','.join(metric_key_list)])
     metric_values_list = raw_data.rstrip(',\n\r').split(',')
     # check if there are string in icingastats output, indicating wrong key names
     for value in metric_values_list:
