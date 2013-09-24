@@ -16,7 +16,7 @@ name = 'icinga-status'
 license = 'GNU GPL v3'
 summary = 'icinga-status - perfdata exposure via http/yaml'
 url = 'https://github.com/marco-hoyer/icinga-status'
-version = '1.0'
+version = '1.0.1'
 
 default_task = ['publish']
 
