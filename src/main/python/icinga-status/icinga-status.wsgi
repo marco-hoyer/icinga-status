@@ -66,7 +66,7 @@ def application(environ, start_response):
         output = 'Error parsing output from icingastats\n  keys: ' + str(metric_key_list) + '\nvalues: ' + str(metric_values_list)
         status = '500 Internal Server Error'
         
-    response_headers = [('Content-type', 'text/plain'),
+    response_headers = [('Content-type', 'text/yaml'),
                         ('Content-Length', str(len(output)))]
     start_response(status, response_headers)
 
